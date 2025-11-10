@@ -1,6 +1,6 @@
 layout: true
 
-<div class="lefttxt">Put ICU to Work!</div>
+<div class="lefttxt">Putting ICU to Work!</div>
 <div class="bottom">45<sup>th</sup> Unicode Technology Workshop • Nov 11<sup>th</sup>, 2025 — 
 Elango Cheran &amp; Markus Scherer</div>
 ---
@@ -8,14 +8,14 @@ Elango Cheran &amp; Markus Scherer</div>
 class: center, middle, whitedrop
 
 .centersml[![Intl](img/iculogo.png)]
-## Put ICU to Work!
+## Putting ICU to Work!
 
 #### Elango Cheran
 #### Markus Scherer
 ???
 Thanks also to Steven R. Looms, Shane Carr, and Craig Cornelius
 
-TITLE: Put ICU to Work!
+TITLE: Putting ICU to Work!
 
 ABSTRACT:
 
@@ -137,7 +137,7 @@ ICU combines up-to-date correctness with real-world performance.
 
 # Where do I get ICU?
 
-## Main site: https://icu-project.org/
+## Main site: https://icu.unicode.org/
 
 - Downloads, API references, Mailing list, Bug tracking
 - Userguide: https://unicode-org.github.io/icu/
@@ -183,12 +183,16 @@ Now in Markdown
 
 ???
 General topics and specific articles.
-The User’s Guide is planned to move to Markdown, which
-should make the content easier to keep up to date.
+The User’s Guide is in Markdown, which
+makes the content easier to update and
+accept fixes from users like you.
 
 ---
 
-# [API Docs](https://unicode-org.github.io/icu-docs/#api-docs)
+# [API Docs](https://unicode-org.github.io/icu-docs/)
+
+* [ICU4C Change Report](https://github.com/unicode-org/icu/blob/main/icu4c/APIChangeReport.md)
+* [ICU4J Change Report](https://htmlpreview.github.io/?https://github.com/unicode-org/icu/blob/main/icu4j/APIChangeReport.html)
 
 .centerbig[![API Docs](img/apidocs.png)]
 ???
@@ -204,9 +208,15 @@ Shows which APIs were added, promoted, to stable, etc. in each release.
 
 ---
 
+# [Download & Release Notes](https://unicode-org.github.io/icu/download/)
+
+.centerbig[![Download Page](img/downloadpage.png)]
+
+---
+
 # Mailing Lists
 
-##  https://icu.unicode.org/contacts
+##  https://unicode-org.github.io/icu/contacts
 - `icu-support` – Technical support and discussion
 - `icu-design` – API proposal discussion
 - `icu-announce` – Low-volume announcements list
@@ -952,7 +962,7 @@ En la región de “Angola” hay 18.565.300 personas.
 
 ### More details:
 
-- [userguide.icu-project.org/design](http://userguide.icu-project.org/design#TOC-ICU-API-compatibility)
+- [ICU User Guide > Design > API Compataibility](https://unicode-org.github.io/icu/userguide/icu/design.html#icu-api-compatibility)
 ---
 
 # API Stability in docs
@@ -989,12 +999,12 @@ _“It’s too big”_
 ICU 64 Data Build Tool
 
 - Slice data by feature and locale
-- [Read the Docs](https://github.com/unicode-org/icu/blob/main/docs/userguide/icu_data/buildtool.md)
+- [Read the Docs](https://unicode-org.github.io/icu/userguide/icu_data/buildtool.html)
 
 Other Customization
 
-- Repackage ICU data http://userguide.icu-project.org/icudata
-- Repackage ICU4C Code http://userguide.icu-project.org/packaging
+- Repackage ICU data https://unicode-org.github.io/icu/userguide/icu_data/
+- Repackage ICU4C Code https://unicode-org.github.io/icu/userguide/icu4c/packaging.html
 
  Example: `#define UCONFIG_NO_LEGACY_CONVERSION`
  - (Note: removes code but not data)
@@ -1004,6 +1014,12 @@ Other Customization
 # Data Changes
 
 .centerbig[![datachange](img/datachange.png)]
+
+???
+
+Note: nowadays, the numbering of ICU & CLDR versions are coordinated.
+ICU version number = 30 + CLDR version number
+Ex: the ICU 78 release contained data from data from CLDR 48 (and Unicode 17 data)
 
 ---
 
@@ -1098,9 +1114,17 @@ layout: false
 
 ---
 
-![:big](Sample Code: <https://bit.ly/iucsamples>)
+![:big](Sample Code: <https://github.com/unicode-org/icu-demos/tree/main/iucsamples>)
 
 .qrightmed[![Intl](img/qr.png)]
+
+#### Elango Cheran
+
+- Github: [@echeran](https://github.com/echeran)
+
+#### Markus Scherer
+
+- Github: [@markusicu](https://github.com/markusicu)
 
 #### Steven Loomis
 
@@ -1108,12 +1132,12 @@ layout: false
 - Web site: [git.io/srl295](https://git.io/srl295)
 - Email: `srl295`<i>@</i>`gmail.com`
 
-#### Craig Cornelius
+#### And more
 
-- Github: [@sven-oly](https://github.com/sven-oly)
-
+- Craig Cornelius: Github: [@sven-oly](https://github.com/sven-oly)
+- Shane Carr: Github: [@sven-oly](https://github.com/sffc)
 
 Have a nice day!
 
 
-.bottom[made with [remark.js](http://remarkjs.com) • fork me on [GitHub](https://github.com/srl295/srl295-slides/tree/2021-iuc45-icuwork-t1t3)]
+.bottom[made with [remark.js](http://remarkjs.com) • fork me on [GitHub](https://github.com/srl295/srl295-slides/)]
