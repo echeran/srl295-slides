@@ -1,4 +1,4 @@
-Putting ICU to Work for IUC44, 2021-iuc45-icuwork-t1t3
+Putting ICU to Work for UTW 2025
 ###
 
 Presentation slides for the 45th [Internationalization and Unicode® Conference](https://www.unicodeconference.org/)

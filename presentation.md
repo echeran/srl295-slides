@@ -1,8 +1,8 @@
 layout: true
 
 <div class="lefttxt">Put ICU to Work!</div>
-<div class="bottom">45<sup>th</sup> Internationalization and Unicode Conference • Oct 13<sup>th</sup>, 2021 — 
-<a href="https://srl295.github.io">@srl295</a> &amp; Craig Cornelius</div>
+<div class="bottom">45<sup>th</sup> Unicode Technology Workshop • Nov 11<sup>th</sup>, 2025 — 
+Elango Cheran &amp; Markus Scherer</div>
 ---
 <!-- _background-image: url(img/node1.png) -->
 class: center, middle, whitedrop
@@ -10,10 +10,10 @@ class: center, middle, whitedrop
 .centersml[![Intl](img/iculogo.png)]
 ## Put ICU to Work!
 
-#### Craig Cornelius
-#### Steven R. Loomis
+#### Elango Cheran
+#### Markus Scherer
 ???
-Thanks also to Shane Carr
+Thanks also to Steven R. Looms, Shane Carr, and Craig Cornelius
 
 TITLE: Put ICU to Work!
 
