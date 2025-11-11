@@ -455,7 +455,7 @@ int main(int argc, const char *argv[]) {
 ```
 --
 
-# `This is ICU 69.1! 😼`
+# `This is ICU 74.2! 😼`
 --
 
 - _but, let’s actually build this_
@@ -483,7 +483,7 @@ git clone https://github.com/unicode-org/icu-demos.git \
 ```shell
 $ cd iucsamples/c/s09_test
 $ make check
-This is ICU 69.1! 😼
+This is ICU 74.2! 😼
 everything is OK 🎉
 ```
 --
@@ -642,7 +642,7 @@ template: hellomsg.cpp
 		<dependency>
 			<groupId>com.ibm.icu</groupId>
 			<artifactId>icu4j</artifactId>
-			<version>69.1</version>
+			<version>74.2</version>
 		</dependency>
 ```
 ???
