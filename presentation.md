@@ -320,7 +320,7 @@ export LD_LIBRARY_PATH=${PATH}:${HOME}/install/lib
 test it out
 
 ```shell
-~/install/tools/icuinfo/icuinfo
+~/install/bin/icuinfo
 ```
 
 ???
@@ -329,6 +329,9 @@ To save bandwidth I do
 ```
 git clone https://github.com/unicode-org/icu.git --reference-if-able=/src/icu
 ```
+
+An alternative to `~/install/bin/icuinfo`, if you do an in-source build, is
+`~/install/tools/icuinfo/icuinfo`.
 
 ---
 
