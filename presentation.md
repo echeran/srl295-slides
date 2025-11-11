@@ -40,7 +40,7 @@ Topics include: Installation (C++ libraries, Java .jar files, Java SPI for JDK i
  + Annexes
 --
 
-- More than 144,000 characters
+- More than 159,000 characters
 --
 
 - Significant update about once a year
@@ -117,6 +117,14 @@ ICU combines up-to-date correctness with real-world performance.
 - Unicode Regular Expressions
 …]
 
+???
+
+And we can add more, such as:
+
+* Units formatting
+* Person name formatting
+* A better version of message formatting
+
 ---
 
 # Benefits of ICU
@@ -191,9 +199,6 @@ accept fixes from users like you.
 
 # [API Docs](https://unicode-org.github.io/icu-docs/)
 
-* [ICU4C Change Report](https://github.com/unicode-org/icu/blob/main/icu4c/APIChangeReport.md)
-* [ICU4J Change Report](https://htmlpreview.github.io/?https://github.com/unicode-org/icu/blob/main/icu4j/APIChangeReport.html)
-
 .centerbig[![API Docs](img/apidocs.png)]
 ???
 - Full class and function documentation
@@ -203,8 +208,15 @@ accept fixes from users like you.
 # [API Change Report](http://site.icu-project.org/download)
 
 .centerbig[![Change Report](img/changerpt.png)]
+
+
+* [ICU4C Change Report](https://github.com/unicode-org/icu/blob/main/icu4c/APIChangeReport.md)
+* [ICU4J Change Report](https://htmlpreview.github.io/?https://github.com/unicode-org/icu/blob/main/icu4j/APIChangeReport.html)
+
+
 ???
 Shows which APIs were added, promoted, to stable, etc. in each release.
+
 
 ---
 
@@ -231,6 +243,8 @@ At least subscribe to the announce list so you can be notified of new ICU versio
 ---
 
 # Contributing
+
+## Main repo: [github.com/unicode-org/icu](https://www.github.com/unicode-org/icu)
 
 1. Open an [issue](https://icu.unicode.org/bugs) in Jira
 2. [Fork](https://github.com/unicode-org/icu/fork) the ICU repo
@@ -282,7 +296,7 @@ docker build https://github.com/unicode-org/icu-docker.git#icu4j-coverity:docker
 
 # Building ICU4C
 
-- make sure git-lfs is installed, and fasten your seatbelts…
+- -~~make sure git-lfs is installed~~
 
 ```shell
 git clone https://github.com/unicode-org/icu.git
@@ -290,7 +304,7 @@ cd icu
 # git checkout … 
 mkdir ~/build
 cd ~/build
-~/icu/icu4c/source/configure --prefix=${HOME}/install
+~/icu/icu4c/source/runConfigureICU --prefix=${HOME}/install
 make -j2 all &&
 make -j2 install
 ```
@@ -306,7 +320,7 @@ export LD_LIBRARY_PATH=${PATH}:${HOME}/install/lib
 test it out
 
 ```shell
-~/install/bin/icuinfo
+~/install/tools/icuinfo/icuinfo
 ```
 
 ???
@@ -589,7 +603,11 @@ template: hellomsg.cpp
     ASSERT_OK(status);
     std::cout << "en: " << result_en << std::endl;
 ```
-### `en: Hello, World`
+
+`./hellomsg`
+
+### en: `Hello, world!`
+### es: `¡Hola, world!`
 
 ---
 template: hellomsg.cpp
@@ -602,7 +620,11 @@ template: hellomsg.cpp
     ASSERT_OK(status);
     std::cout << "es: " << result_es << std::endl;
 ```
-### es: ¡Hola, Mundo!
+
+`LC_ALL=es ./hellomsg`
+
+### en: `Hello, Mundo!`
+### es: `¡Hola, Mundo!`
 
 ---
 
