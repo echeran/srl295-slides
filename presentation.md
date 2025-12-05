@@ -1,7 +1,7 @@
 layout: true
 
 <div class="lefttxt">Putting ICU to Work!</div>
-<div class="bottom">45<sup>th</sup> Unicode Technology Workshop • Nov 11<sup>th</sup>, 2025 — 
+<div class="bottom">Unicode Technology Workshop • Nov 11<sup>th</sup>, 2025 — 
 Elango Cheran &amp; Markus Scherer</div>
 ---
 <!-- _background-image: url(img/node1.png) -->
@@ -367,7 +367,7 @@ name: firstlook
 
 void func() {
   UErrorCode status = U_ZERO_ERROR;
-  u_init(&status);
+  USet* set = uset_openPattern(u"[[:Tamil:]&[:Letter:]]", &status);
   if ( U_SUCCESS(status) ) { /* … */ }
 }
 ```
@@ -385,8 +385,8 @@ template: firstlook
 ---
 template: firstlook
 
-### `u_init(&status);`
-- Returns successful `status` if ICU data loaded OK
+### `uset_openPattern(..., &status);`
+- Returns successful `status` if ICU succeeded in building a set of characters according to the pattern string
 ---
 template: firstlook
 
@@ -403,7 +403,7 @@ No need to initialize!  Less prone to error:
 
 int main() {
   icu::ErrorCode status;
-  u_init(status);
+  USet* set = uset_openPattern(u"[[:Tamil:]&[:Letter:]]", &status);
   if (status.isFailure()) {
     return 1;
   }
@@ -898,7 +898,7 @@ Via Message String:
 
   BreakIterator *wordIterator = BreakIterator::createWordInstance(locale, status);
   breakIterator->setText(u"Hello World");
-  breakIterator->current(); // 0
+  breakIterator->first(); // 0
   breakIterator->next(); // 5
   breakIterator->next(); // 6
   breakIterator->next(); // 11
@@ -1160,7 +1160,7 @@ layout: false
 #### And more
 
 - Craig Cornelius: Github: [@sven-oly](https://github.com/sven-oly)
-- Shane Carr: Github: [@sven-oly](https://github.com/sffc)
+- Shane Carr: Github: [@sffc](https://github.com/sffc)
 
 Have a nice day!
 
