@@ -15,11 +15,17 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+		<!-- ICU customization -->
+		 <!-- https://github.com/e-gor/Reveal.js-Title-Footer @ c487e7f -->
+		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
 	</head>
 	<body>
 		<div class="reveal">
+
 			<div class="slides">
-				<section>Slide 1</section>
+				<section data-state="no-title-footer">Slide 1</section>
 				<section>Slide 2</section>
 			</div>
 		</div>
@@ -37,6 +43,21 @@
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+				dependencies:
+				[
+					// ICU customization
+					// https://github.com/e-gor/Reveal.js-Title-Footer @ c487e7f
+					{ 
+						src: 'plugin/title-footer/title-footer.js', 
+						async: true, 
+					  	callback: function() { 
+					  		title_footer.initialize(
+								'Unicode Technology Workshop • Oct 20, 2026 — Elango Cheran & Markus Scherer'
+							); 
+						}
+					}
+				]
 			});
 		</script>
 	</body>
