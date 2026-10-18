@@ -1,7 +1,7 @@
 layout: true
 
 <div class="lefttxt">Putting ICU to Work!</div>
-<div class="bottom">Unicode Technology Workshop • Nov 11<sup>th</sup>, 2025 — 
+<div class="bottom">Unicode Technology Workshop • Oct 20<sup>th</sup>, 2026 — 
 Elango Cheran &amp; Markus Scherer</div>
 ---
 <!-- _background-image: url(img/node1.png) -->
@@ -98,14 +98,14 @@ ICU combines up-to-date correctness with real-world performance.
 - Breaks: word, line, …
 - Formatting
   - Date & time
-  - Durations
   - Messages
   - Numbers & currencies
+  - Person Names
   - Plurals
+  - Units
 - Transforms
   - Normalization
-  - Casing
-- Transliterations]
+  - Casing]
 .rightside[
 - Unicode text handling
 - Charset conversions (200+)
