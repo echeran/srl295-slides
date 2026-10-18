@@ -11,22 +11,273 @@
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+
+		<!-- ICU customization - use custom theme / colors -->
+		<link rel="stylesheet" href="dist/theme/icu.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
 
-		<!-- ICU customization -->
-		 <!-- https://github.com/e-gor/Reveal.js-Title-Footer @ c487e7f -->
+		<!-- ICU customization - add footer on slides -->
+		 <!-- footer text configured at bottom of file -->
+		<!-- https://github.com/e-gor/Reveal.js-Title-Footer @ c487e7f -->
 		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- ICU customization - enable two column layout -->
+		<!-- https://stackoverflow.com/questions/30861845/how-to-use-two-column-layout-with-reveal-js -->
+		<style>
+			.container{
+				display: flex;
+			}
+			.col{
+				flex: 1;
+			}
+		</style>
+
+		<!-- ICU customization - vertical spacing between list items -->
+		<!-- https://stackoverflow.com/questions/19254411/how-do-i-set-vertical-space-between-list-items -->
+		<style>
+			li {
+			margin: 0.4em 0;
+			}
+		</style>
+
+		<!-- ICU customization - medium and small text size lists -->
+		<style>
+			ul.mediumlist li,
+			ul.mediumlist li.mediumlist,
+			ul li.mediumlist,
+			li.mediumlist {
+				font-size: 30px;
+			}
+
+			ul.smalllist li,
+			ul.smalllist li.smalllist,
+			ul li.smalllist,
+			li.smalllist {
+				font-size: 20px;
+			}
+
+		</style>
+
+		<!-- ICU customization - wide blockquote -->
+		<style>
+			.widequote {
+				margin-left: 20px;
+				margin-right: 20px;
+				width: 100%;
+			}
+		</style>
 
 	</head>
 	<body>
 		<div class="reveal">
 
 			<div class="slides">
-				<section data-state="no-title-footer">Slide 1</section>
-				<section>Slide 2</section>
+				<section data-state="no-title-footer">
+					<div class="container">
+						<div class="col">
+							<img src="img/iculogo.png" />
+						</div>
+						<div class="col">
+							<h2>Putting ICU to work!</h2>
+							<p>Elango Cheran</p>
+							<p>Markus Scherer</p>
+							<p>&nbsp;</p>
+							<p><small>Unicode Technology Workshop<br/>Oct 20, 2026</small></p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="none-out">
+					<h2>Can’t I just “use Unicode” and be done?</h2>
+					<div class="container">
+
+						<div class="col">
+							<ul>
+								<li class="fragment">almost 4,000 pages (core+charts)</li>
+								<ul>
+									<li class="fragment">Annexes</li>
+								</ul>
+								<li class="fragment">More than 159,000 characters</li>
+								<li class="fragment">Significant update about once a year</li>
+								<li class="fragment">80+ character properties</li>
+							</ul>
+						</div>
+						<div class="col">
+							<img class="fragment" data-fragment-index="1" src="img/heavybooks.jpg" />
+						</div>
+					</div>
+				</section>
+				<section data-transition="none-in slide-out">
+					<h2>Can’t I just “use Unicode” and be done?</h2>
+					<div class="container">
+						<div class="col">
+							<ul>
+								<li>Additional standards and geopolitical requirements</li>
+								<ul>
+									<li class="fragment">CLDR, ISO, TZ, …</li>
+								</ul>
+								<aside class="notes">
+									<p><b>CLDR, ISO, TZ</b></p>
+									<ul>
+										<li>Locale data</li>
+										<li>new ISO language/territory changes</li>
+										<li>Time zone changes</li>
+									</ul>
+								</aside>
+								<li class="fragment">Good vs. fast</li>
+								<aside class="notes">
+									<p><b>Good vs. fast:</b> ICU combines up-to-date correctness with real-world performance.</p>
+								</aside>
+							</ul>
+						</div>
+						<div class="col">
+							<img src="img/heavybooks.jpg" />
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Unicode covers the world 🌍</h2>
+					<span>
+						<blockquote class="">
+							“Unicode provides a unique number for every character, no matter what the platform, no matter what the program, no matter what the language.”
+						</blockquote>
+						<p> &mdash; <a href="https://www.unicode.org/standard/WhatIsUnicode.html"><code>unicode.org</code></a></p>
+					</span>
+				</section>
+				<section>
+					<h2>ICU brings you home 🏡</h2>
+					<div class="container">
+						<div class="col">
+							<ul>
+								<li>Requirements vary widely across languages & countries</li>
+								<li>Sorting</li>
+								<li>Text searching</li>
+								<li>Bidirectional text processing</li>
+							</ul>
+						</div>
+						<div class="col">
+							<ul>
+								<li>Date/time/number/currency formatting</li>
+								<li>Codepage conversion</li>
+								<li>…many more</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>I See Unicode</h2>
+					<ul>
+						<li>1999: <i>IBM Classes for Unicode</i> open-sourced as the <i>International Components for Unicode</i></li>
+						<li>2016: ICU joins Unicode as <a href="http://blog.unicode.org/2016/05/icu-joins-unicode-consortium.html">ICU-TC</a></li>
+						<li>2018: Development now on <a href="http://blog.unicode.org/2018/07/icu-moves-to-github-and-jira.html">GitHub and Jira</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>ICU’s Laundry List</h2>
+					<div class="container">
+						<div class="col">
+							<ul class="mediumlist">
+								<li>Breaks: word, line, …</li>
+								<li>Formatting</li>
+								<ul>
+									<li>Dates & times</li>
+									<li>Messages</li>
+									<li>Numbers & currencies</li>
+									<li>Person Names</li>
+									<li>Plurals</li>
+									<li>Units</li>
+								</ul>
+								<li>Transforms</li>
+								<ul>
+									<li>Normalization</li>
+									<li>Casing</li>
+								</ul>
+								
+							</ul>
+						</div>
+						<div class="col">
+							<ul class="mediumlist">
+								<li>Unicode text handling</li>
+								<li>Charset conversions (200+)</li>
+								<li>Charset detection</li>
+								<li>Collation & Searching</li>
+								<li>Locales from CLDR (640+)</li>
+								<li>Resource Bundles</li>
+								<li>Calendar & Time zones</li>
+								<li>Unicode Regular Expressions</li>
+								<li>Unicode character property data</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Benefits of ICU</h2>
+					<ul class="mediumlist">
+						<span class="fragment">
+						<li>Mature, widely used, up-to-date set of C/C++ and Java libraries</li>
+						<ul>
+						  <li>Basis for Java 1.1 internationalization, but goes far beyond Java 1.1</li>
+						  <li>Team continues to work on improving and monitoring performance.</li>
+						</ul>
+						</span>
+						<span class="fragment">
+						<li>Very portable – identical results on all platforms/programming languages</li>
+						<ul>
+						  <li>C/C++ (ICU4C): many platforms/compilers</li>
+						  <li>Java (ICU4J): Oracle Java SE, IBM JRE, OpenJDK, Android</li>
+						  <li>Wrappers: D/C#/PHP/Python/…</li>
+						</ul>
+						</span>
+					</ul>
+				</section>
+				<section>
+					<h2>Benefits of ICU</h2>
+					<ul class="mediumlist">
+						<span class="fragment">
+						<li>Customizable & Modular</li>
+						<ul>
+						  <li>Open source (since 1999) – and non-restrictive</li>
+						  <li>Contributions from many parties (IBM, Google, Apple, Microsoft, …)</li>
+						</ul>
+						</span>
+						<span class="fragment">
+						<li>Sponsored by Unicode</li>
+						</span>
+					</ul>
+				</section>
+				<section>
+					<h2>Where do I get ICU?</h2>
+					<center><blockquote>Main site: <a href="https://icu.unicode.org/">https://icu.unicode.org/</a></blockquote></center>
+					<ul>
+						<li class="fragment">Downloads, API references, Mailing list, Bug tracking</li>
+						<span class="fragment">
+						<li>User guide: <a href="https://unicode-org.github.io/icu/">https://unicode-org.github.io/icu/</a></li>
+						<ul>
+						  <li>Now in Markdown, part of the ICU code</li>
+						  <li>User guide with examples</li>
+						</ul>
+						</span>
+					</ul>
+				</section>
+				<section>
+					<h2>Prepackaged ICU</h2>
+					<span class="fragment">
+					<h3>Package Managers (C)</h3>
+					<ul>
+						<li><code>brew install icu4c</code></li>
+						<li><code>apt-get install libicu-dev</code></li>
+						<li><code>dnf install libicu-devel</code></li>
+					</ul>
+					</span>
+					<span class="fragment">
+					<h3>Maven and friends (J)</h3>
+					<ul>
+						<li>group: <code>com.ibm.icu</code></li>
+						<li>artifactId: <code>icu4j</code></li>
+					</ul>
+					</span>
+				</section>
 			</div>
 		</div>
 
@@ -53,11 +304,17 @@
 						async: true, 
 					  	callback: function() { 
 					  		title_footer.initialize(
-								'Unicode Technology Workshop • Oct 20, 2026 — Elango Cheran & Markus Scherer'
+								'Putting ICU to Work! • Unicode Technology Workshop • Oct 20, 2026 — Elango Cheran & Markus Scherer'
 							); 
 						}
 					}
-				]
+				],
+
+				slideNumber: 'c/t',
+
+				margin: 0.04,
+				minScale: 0.2,
+				maxScale: 2.0,
 			});
 		</script>
 	</body>
