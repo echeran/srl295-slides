@@ -827,7 +827,9 @@ population={population, plural,
 ```
 --
 
-- no code change
+- use `=0` to match exact number 0 *before* default `other` category
+--
+- our message pattern for `=0` is more natural to user
 --
 
 ```
@@ -880,6 +882,30 @@ Try:
 
 ```
 $ env LC_ALL=el make check
+./s88_units
+The room measures 1 meter wide.
+The room measures 5 meters wide.
+The room measures 1 μέτρο wide.
+The room measures 5 μέτρα wide.
+```
+
+---
+
+# Units and Currencies - Skeletons + Target Locale
+
+```
+$ LC_ALL=en-GB make check
+./s88_units
+The room measures 1 meter wide.
+The room measures 5 meters wide.
+The room measures 1 metre wide.
+The room measures 5 metres wide.
+```
+
+--
+
+```
+$ LC_ALL=el make check
 ./s88_units
 The room measures 1 meter wide.
 The room measures 5 meters wide.
@@ -976,7 +1002,7 @@ Sample: `s23_brki.cpp`
 ```
 --
 
-* No Lambda function needed if `Set<String>`
+* No Lambda function needed if not ordered: `Set<String>`
 
 ---
 
