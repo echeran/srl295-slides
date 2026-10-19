@@ -745,6 +745,7 @@ template: BadMessage.java
 
 ```
 The territory of Bouvet Island has 1 persons.
+...
 The territory of Unknown Region has 0 persons.
 ```
 
@@ -800,18 +801,49 @@ population={population, plural,
 --
 
 ```
-The territory of United States has 323,996,000 persons
-The territory of Unknown Region has 0 persons
-The territory of Uruguay has 3,351,020 persons
 The territory of Botswana has 2,209,210 persons
 The territory of Bouvet Island has 1 person
 The territory of Brazil has 205,824,000 persons
+...
+The territory of United States has 323,996,000 persons
+The territory of Unknown Region has 0 persons
+The territory of Uruguay has 3,351,020 persons
 ```
 
 ???
 ```
 mvn exec:java \
  -Dexec.mainClass=com.ibm.us.srloomis.demo.icu2work.GoodMessage
+```
+---
+
+# `BetterMessage.properties`
+
+```properties
+population={population, plural,
+  =0 {The territory of {territory} is uninhabited}
+  one{The territory of {territory} has # person}
+  other{The territory of {territory} has # persons}}
+```
+--
+
+- no code change
+--
+
+```
+The territory of Botswana has 2,209,210 persons
+The territory of Bouvet Island has 1 person
+The territory of Brazil has 205,824,000 persons
+...
+The territory of United States has 329,256,000 persons
+The territory of Unknown Region is uninhabited
+The territory of Uruguay has 3,369,300 persons
+```
+
+???
+```
+mvn exec:java \
+ -Dexec.mainClass=com.ibm.us.srloomis.demo.icu2work.BetterMessage
 ```
 ---
 
