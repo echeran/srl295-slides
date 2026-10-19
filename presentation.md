@@ -531,7 +531,7 @@ $ LC_ALL=es ./s13a_hello
 # `Hello, Mundo!`
 ---
 
-# `icuhelloworld.cpp`
+template: icuhelloworld.cpp
 
 ```shell
 $ LC_ALL=mt ./s13a_hello
