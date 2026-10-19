@@ -124,5 +124,8 @@
 		"node-qunit-puppeteer": {
 			"puppeteer": "$puppeteer"
 		}
+	},
+	"dependencies": {
+		"reveal.js": "^6.0.2"
 	}
 }
