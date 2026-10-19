@@ -819,7 +819,7 @@ mvn exec:java \
 
 ```txt
 The room measures
-{0, plural, one{1 meter} other{# meters}}
+{0, plural, one{# meter} other{# meters}}
 wide.
 ```
 
@@ -1001,9 +1001,9 @@ En la región de “Angola” hay 18.565.300 personas.
 - Consumer program should be compiled successfully without changes.
 - Rare exceptions, documented in readme.
 
-## Serialization compatible (ICU4J)
-- Newer ICU version should be able to deserialize object data serialized by older ICU version.
-- (see docs for limited exceptions)
+## ~~Serialization compatible (ICU4J)~~
+- ~~Newer ICU version should be able to deserialize object data serialized by older ICU version.~~
+- ~~(see docs for limited exceptions)~~
 ---
 
 # ICU Data File
@@ -1028,8 +1028,8 @@ ICU 64 Data Build Tool
 
 Other Customization
 
-- Repackage ICU data https://unicode-org.github.io/icu/userguide/icu_data/
-- Repackage ICU4C Code https://unicode-org.github.io/icu/userguide/icu4c/packaging.html
+- Repackage ICU data [`https://unicode-org.github.io/icu/userguide/icu_data/`](https://unicode-org.github.io/icu/userguide/icu_data/)
+- Repackage ICU4C Code [`https://unicode-org.github.io/icu/userguide/icu4c/packaging.html`](https://unicode-org.github.io/icu/userguide/icu4c/packaging.html)
 
  Example: `#define UCONFIG_NO_LEGACY_CONVERSION`
  - (Note: removes code but not data)
@@ -1088,7 +1088,7 @@ Ex: the ICU 78 release contained data from data from CLDR 48 (and Unicode 17 dat
 
 - DON’T store localized data on disk
 --
-( later app version may parse/format differently)]
+( later app version may parse/format differently )
 --
 
 - DO send and store non-localized format
