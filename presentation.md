@@ -172,7 +172,7 @@ The easiest way to build ICU is to let someone else build it.
 
 ---
 
-# [ICU Userguide](https://unicode-org.github.io/icu/userguide/)
+# [ICU User Guide](https://unicode-org.github.io/icu/userguide/)
 
 Now in Markdown
 
